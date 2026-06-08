@@ -4,87 +4,99 @@ import { useState } from "react";
 import TechLabel from "./TechLabel";
 import type { Product } from "@/data/products";
 
-function ProductImage({
-  src,
-  alt,
-  className,
-}: {
-  src: string;
-  alt: string;
-  className?: string;
-}) {
-  const [failed, setFailed] = useState(false);
-
-  if (failed) {
-    return <div className={`product-img-fallback ${className ?? ""}`} />;
-  }
-
-  return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={src}
-      alt={alt}
-      className={className}
-      loading="lazy"
-      onError={() => setFailed(true)}
-    />
-  );
-}
-
 export default function ProductCard({ product }: { product: Product }) {
-  const isDual = product.images.length > 1;
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const totalImages = product.images.length;
+
   const statusLabel = product.featured
     ? "Flaggskip"
     : product.separate
-      ? "Kan kjøpes separat"
-      : "Hovedprodukt";
+      ? "Separat"
+      : "Systemdel";
+
+  const accentClass = `product-card-v2--${product.accent}`;
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % totalImages);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + totalImages) % totalImages);
+  };
 
   return (
-    <article
-      className={`product-card product-card--${product.accent}${product.featured ? " product-card--featured" : ""}${product.separate ? " product-card--separate" : ""}`}
-    >
-      <div className="product-card-header">
-        <div className="product-card-meta">
+    <article className={`product-card-v2 ${accentClass}`}>
+      <div className="product-card-v2-top">
+        <div className="product-card-v2-meta">
           <TechLabel variant={product.accent}>{product.code}</TechLabel>
-          <span className="product-status">{statusLabel}</span>
+          <span className="product-card-v2-status">{statusLabel}</span>
         </div>
-        <h3 className="product-name">{product.name}</h3>
-        <p className="product-type">{product.type}</p>
+
+        <div>
+          <h3 className="product-card-v2-name">{product.name}</h3>
+          <p className="product-card-v2-type">{product.type}</p>
+        </div>
       </div>
 
-      <div
-        className={`product-media${isDual ? " product-media--dual" : " product-media--single"}`}
-      >
-        {isDual ? (
+      <div className="product-card-v2-stage">
+        <div className="product-card-v2-image-wrap">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={product.images[currentImageIndex].src}
+            alt={product.images[currentImageIndex].alt}
+            className="product-card-v2-image"
+            loading="lazy"
+          />
+        </div>
+
+        {totalImages > 1 && (
           <>
-            <div className="product-media-primary">
-              <ProductImage
-                src={product.images[0].src}
-                alt={product.images[0].alt}
-              />
-            </div>
-            <div className="product-media-secondary">
-              <ProductImage
-                src={product.images[1].src}
-                alt={product.images[1].alt}
-              />
+            <button
+              type="button"
+              className="product-card-v2-arrow product-card-v2-arrow--left"
+              onClick={prevImage}
+              aria-label="Forrige produktbilde"
+            >
+              ←
+            </button>
+
+            <button
+              type="button"
+              className="product-card-v2-arrow product-card-v2-arrow--right"
+              onClick={nextImage}
+              aria-label="Neste produktbilde"
+            >
+              →
+            </button>
+
+            <div className="product-card-v2-dots">
+              {product.images.map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  aria-label={`Vis produktbilde ${index + 1}`}
+                  className={
+                    index === currentImageIndex
+                      ? "product-card-v2-dot active"
+                      : "product-card-v2-dot"
+                  }
+                  onClick={() => setCurrentImageIndex(index)}
+                />
+              ))}
             </div>
           </>
-        ) : (
-          <div className="product-media-wide">
-            <ProductImage
-              src={product.images[0].src}
-              alt={product.images[0].alt}
-            />
-          </div>
         )}
       </div>
 
-      <div className="product-body">
-        <p className="product-ingress">{product.ingress}</p>
-        <p className="product-desc">{product.description}</p>
-        <p className="product-tagline">{product.tagline}</p>
-        <a href="#venteliste" className="product-cta-btn">
+      <div className="product-card-v2-body">
+        <p className="product-card-v2-ingress">{product.ingress}</p>
+        <p className="product-card-v2-desc">{product.description}</p>
+
+        {product.tagline && (
+          <p className="product-card-v2-tagline">“{product.tagline}”</p>
+        )}
+
+        <a href="#venteliste" className="product-card-v2-cta">
           {product.cta}
         </a>
       </div>

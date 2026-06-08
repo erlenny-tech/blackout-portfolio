@@ -33,6 +33,7 @@ export default function FAQ() {
       <div className="container">
         <p className="section-index">07 / FAQ</p>
         <h2 className="section-title">Spørsmål folk faktisk stiller</h2>
+
         <div className="faq-list">
           {items.map((item, i) => (
             <div
@@ -49,6 +50,7 @@ export default function FAQ() {
                 </span>
                 {item.q}
               </button>
+
               <p className="faq-answer">{item.a}</p>
             </div>
           ))}

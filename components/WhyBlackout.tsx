@@ -15,16 +15,18 @@ export default function WhyBlackout() {
         <div className="why-grid">
           <div className="why-copy">
             <p className="section-index">04 / Hvorfor</p>
+
             <h2 className="section-title">
               Bygget som utstyr.
               <br />
               Brukt som sengetøy.
             </h2>
+
             <p className="body-text">
               BLACKOUT tar signaler fra friluftsprodukter, sportstekstiler og
               sleep tech — men uten guruprat. Dette er sengetøy med tydelig
-              formål: bedre kontaktflater, friskere netter, enklere vask og null
-              beige livsstilsløgn.
+              formål: bedre kontaktflater, friskere netter, enklere vask og
+              null beige livsstilsløgn.
             </p>
           </div>
 
@@ -33,7 +35,9 @@ export default function WhyBlackout() {
               <span className="gear-label-brand">BLACKOUT</span>
               <TechLabel variant="green">Aktiv</TechLabel>
             </div>
+
             <div className="gear-label-bar" aria-hidden="true" />
+
             <dl className="gear-label-specs">
               {labelLines.map((line) => (
                 <div key={line.key} className="gear-label-row">
@@ -42,6 +46,7 @@ export default function WhyBlackout() {
                 </div>
               ))}
             </dl>
+
             <div className="gear-label-footer">
               <span>Made for night</span>
               <span className="gear-label-code">BLK-01-NO</span>

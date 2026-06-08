@@ -18,8 +18,6 @@ export default function Waitlist() {
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // TODO: Koble til Mailchimp, Brevo eller Tally webhook
-    // TODO: Legg til analytics-event (f.eks. Plausible, GA4)
     setSubmitted(true);
   }
 
@@ -30,6 +28,7 @@ export default function Waitlist() {
           <p className="section-index">06 / Venteliste</p>
           <h2 className="section-title">Første slipp kommer.</h2>
         </div>
+
         <p className="body-text">
           Bli med på første slipp. Du får tidlig tilgang, lanseringspris og
           første versjon av BLACKOUT Night Protocol.
@@ -38,9 +37,10 @@ export default function Waitlist() {
         {submitted ? (
           <div className="waitlist-success">
             <TechLabel variant="green">Bekreftet</TechLabel>
-            <h3>Du er på lista. Sov hardt.</h3>
+            <h3>Du er på lista.</h3>
             <p className="body-text">
-              Vi sender beskjed når Drop 01 er klart.
+              Du får tidlig tilgang, lanseringspris og første versjon av
+              BLACKOUT Night Protocol.
             </p>
           </div>
         ) : (
@@ -50,6 +50,7 @@ export default function Waitlist() {
                 <span className="form-label-tag">Felt_01</span>
                 E-post
               </label>
+
               <input
                 id="email"
                 name="email"
@@ -59,15 +60,18 @@ export default function Waitlist() {
                 autoComplete="email"
               />
             </div>
+
             <div className="form-group">
               <label htmlFor="interest">
                 <span className="form-label-tag">Felt_02</span>
                 Hva bryr du deg mest om?
               </label>
+
               <select id="interest" name="interest" required defaultValue="">
                 <option value="" disabled>
                   Velg ett alternativ
                 </option>
+
                 {interests.map((opt) => (
                   <option key={opt} value={opt}>
                     {opt}
@@ -75,6 +79,7 @@ export default function Waitlist() {
                 ))}
               </select>
             </div>
+
             <button type="submit" className="btn btn-primary btn--wide">
               <span className="btn-tag">JOIN</span>
               Bli med på første slipp
