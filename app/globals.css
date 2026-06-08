@@ -7,25 +7,21 @@
 }
 
 :root {
-  --void: #020202;
-  --black: #050505;
-  --coal: #0c0c0c;
-  --coal-mid: #111111;
-  --coal-light: #181818;
-  --gray: #555560;
-  --gray-mid: #7a7a88;
-  --gray-light: #b0b0b8;
-  --off-white: #ecece6;
-  --ice: #5ec8ff;
-  --ice-dim: rgba(94, 200, 255, 0.15);
-  --volt: #b8ff3c;
-  --volt-dim: rgba(184, 255, 60, 0.12);
-  --flare: #ff4d1a;
-  --flare-dim: rgba(255, 77, 26, 0.12);
-  --border: rgba(236, 236, 230, 0.08);
-  --border-strong: rgba(236, 236, 230, 0.18);
-  --font: "Segoe UI", system-ui, -apple-system, sans-serif;
-  --mono: "Cascadia Code", "Consolas", "Courier New", monospace;
+  /* Core Palette */
+  --color-black: #000000;
+  --color-carbon: #111111;
+  --color-graphite: #1C1E1D;
+  --color-recovery-charcoal: #242A2B;
+  --color-deep-moss: #313D32;
+  --color-slate-green: #586357;
+  --color-concrete-grey: #A7A39A;
+  --color-ash-silver: #D7D5CD;
+  --color-volt-cream: #F1F0D8;
+  
+  /* Accents */
+  --color-signal-lime: #C8FF2E;
+  --color-heat-orange: #FF5C1A;
+  --color-cold-blue: #8ED8FF;
 }
 
 html {
@@ -33,11 +29,9 @@ html {
 }
 
 body {
-  font-family: var(--font);
-  background: var(--void);
-  color: var(--off-white);
-  line-height: 1.55;
-  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-black);
+  color: var(--color-volt-cream);
+  font-family: sans-serif; /* Eller den fonten du har fra før */
 }
 
 a {
