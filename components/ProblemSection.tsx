@@ -1,52 +1,102 @@
 import TechLabel from "./TechLabel";
 
-const cards = [
+const FRONT_IMAGE_URL =
+  "https://pwbnsubgsskjhcshihwn.supabase.co/storage/v1/object/public/Bilder/fremsidebilde.png";
+
+const proofPoints = [
   {
-    num: "01",
-    tag: "Hudkontakt",
-    title: "Hud møter stoff",
-    text: "Åtte timer med direkte kontakt. Likevel velges sengetøy etter farge.",
+    label: "01",
+    title: "Termoregulering",
+    text: "Materialet skal hjelpe kroppen å kvitte seg med varme, ikke fange den inne.",
   },
   {
-    num: "02",
-    tag: "Friksjon",
-    title: "Hår møter friksjon",
-    text: "Putevaret ditt er ikke uskyldig. Friksjon skjer hver natt.",
+    label: "02",
+    title: "Mindre friksjon",
+    text: "Overflaten er laget for hud, hår og bevegelse gjennom natten.",
   },
   {
-    num: "03",
-    tag: "Termisk",
-    title: "Kropp møter varme",
-    text: "Svette, varme kinn og den kalde siden av puta. Natten er fysisk.",
+    label: "03",
+    title: "Restitusjon",
+    text: "Søvn er ikke passiv. Kroppen reparerer, regulerer og bygger seg opp igjen.",
   },
 ];
 
 export default function ProblemSection() {
   return (
-    <section className="section" id="problem">
+    <section className="section problem-section" id="problem">
       <div className="container">
-        <div className="section-head">
-          <p className="section-index">02 / Problem</p>
-          <h2 className="section-title">Natten er fysisk.</h2>
-        </div>
+        <div className="problem-feature">
+          <div className="problem-feature-copy">
+            <p className="section-index">02 / Hvorfor</p>
 
-        <p className="body-text">
-          Søvn snakkes ofte om ro, rutiner og mørke. Men natten er også
-          hudkontakt, varme, friksjon, svette, hår, nattkrem og tekstil.
-          Likevel selges sengetøy som interiør. Vi synes det er rart.
-        </p>
+            <h2 className="section-title problem-feature-title">
+              SØVN ER EN FYSISK PROSESS.
+            </h2>
 
-        <div className="problem-grid">
-          {cards.map((card) => (
-            <div key={card.num} className="problem-card">
-              <div className="problem-card-top">
-                <span className="problem-card-num">{card.num}</span>
-                <TechLabel variant="neutral">{card.tag}</TechLabel>
+            <div className="problem-feature-text">
+              <p>
+                Kroppen regulerer temperatur. Huden møter tekstil. Fukt
+                transporteres, varme akkumuleres, og cellene gjenoppbygges
+                mellom søvnfasene.
+              </p>
+
+              <p>
+                Likevel har sengetøy nesten alltid blitt designet som interiør.
+              </p>
+
+              <p>
+                BLACKOUT er utviklet for kroppen, ikke soverommet. Teknisk
+                utstyr konstruert for termoregulering, mindre friksjon og
+                uforstyrret restitusjon.
+              </p>
+
+              <p>
+                Fordi kvaliteten på materialet avgjør hvordan du våkner.
+              </p>
+            </div>
+
+            <div className="problem-feature-actions">
+              <a href="#produkter" className="btn btn-primary">
+                <span className="btn-tag">DROP</span>
+                Se produktene
+              </a>
+
+              <a href="#hvorfor" className="btn btn-secondary">
+                <span className="btn-tag">TECH</span>
+                Hvordan det virker
+              </a>
+            </div>
+          </div>
+
+          <div className="problem-feature-media">
+            <div className="problem-feature-image-frame">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={FRONT_IMAGE_URL}
+                alt="BLACKOUT funksjonelt sengetøy i mørk teknisk produktsetting"
+                className="problem-feature-image"
+              />
+
+              <div className="problem-feature-image-overlay" />
+
+              <div className="problem-feature-badge problem-feature-badge--top">
+                <TechLabel variant="blue">Thermal control</TechLabel>
               </div>
 
-              <h3>{card.title}</h3>
-              <p>{card.text}</p>
+              <div className="problem-feature-badge problem-feature-badge--bottom">
+                <span>Material matters</span>
+              </div>
             </div>
+          </div>
+        </div>
+
+        <div className="problem-proof-grid">
+          {proofPoints.map((point) => (
+            <article key={point.label} className="problem-proof-card">
+              <span className="problem-proof-label">{point.label}</span>
+              <h3>{point.title}</h3>
+              <p>{point.text}</p>
+            </article>
           ))}
         </div>
       </div>

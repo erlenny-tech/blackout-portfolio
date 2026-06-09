@@ -1,20 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import TechLabel from "./TechLabel";
 import type { Product } from "@/data/products";
 
 export default function ProductCard({ product }: { product: Product }) {
+  const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const totalImages = product.images.length;
-
-  const statusLabel = product.featured
-    ? "Flaggskip"
-    : product.separate
-      ? "Separat"
-      : "Systemdel";
-
-  const accentClass = `product-card-v2--${product.accent}`;
+  const currentImage = product.images[currentImageIndex];
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % totalImages);
@@ -24,82 +18,146 @@ export default function ProductCard({ product }: { product: Product }) {
     setCurrentImageIndex((prev) => (prev - 1 + totalImages) % totalImages);
   };
 
+  const openProduct = () => {
+    setCurrentImageIndex(0);
+    setIsOpen(true);
+  };
+
   return (
-    <article className={`product-card-v2 ${accentClass}`}>
-      <div className="product-card-v2-top">
-        <div className="product-card-v2-meta">
-          <TechLabel variant={product.accent}>{product.code}</TechLabel>
-          <span className="product-card-v2-status">{statusLabel}</span>
-        </div>
-
-        <div>
-          <h3 className="product-card-v2-name">{product.name}</h3>
-          <p className="product-card-v2-type">{product.type}</p>
-        </div>
-      </div>
-
-      <div className="product-card-v2-stage">
-        <div className="product-card-v2-image-wrap">
+    <>
+      <button
+        type="button"
+        className={`product-tile product-tile--${product.accent}`}
+        onClick={openProduct}
+        aria-label={`Se mer om ${product.name}`}
+      >
+        <div className="product-tile-media">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={product.images[currentImageIndex].src}
-            alt={product.images[currentImageIndex].alt}
-            className="product-card-v2-image"
+            src={product.images[0].src}
+            alt={product.images[0].alt}
+            className="product-tile-image"
             loading="lazy"
           />
+
+          <div className="product-tile-shade" />
+
+          <div className="product-tile-label">
+            <span>{product.code}</span>
+          </div>
+
+          <div className="product-tile-content">
+            <h3>{product.name}</h3>
+            <p>{product.type}</p>
+          </div>
+
+          <div className="product-tile-action">
+  <span>Les mer</span>
+</div>
         </div>
+      </button>
 
-        {totalImages > 1 && (
-          <>
+      {isOpen && (
+        <div
+          className="product-modal-backdrop"
+          role="dialog"
+          aria-modal="true"
+          aria-label={product.name}
+        >
+          <div className="product-modal">
             <button
               type="button"
-              className="product-card-v2-arrow product-card-v2-arrow--left"
-              onClick={prevImage}
-              aria-label="Forrige produktbilde"
+              className="product-modal-close"
+              onClick={() => setIsOpen(false)}
+              aria-label="Lukk produktvisning"
             >
-              ←
+              ×
             </button>
 
-            <button
-              type="button"
-              className="product-card-v2-arrow product-card-v2-arrow--right"
-              onClick={nextImage}
-              aria-label="Neste produktbilde"
-            >
-              →
-            </button>
+            <div className="product-modal-media">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={currentImage.src}
+                alt={currentImage.alt}
+                className="product-modal-image"
+              />
 
-            <div className="product-card-v2-dots">
-              {product.images.map((_, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  aria-label={`Vis produktbilde ${index + 1}`}
-                  className={
-                    index === currentImageIndex
-                      ? "product-card-v2-dot active"
-                      : "product-card-v2-dot"
-                  }
-                  onClick={() => setCurrentImageIndex(index)}
-                />
-              ))}
+              {totalImages > 1 && (
+                <>
+                  <button
+                    type="button"
+                    className="product-modal-arrow product-modal-arrow--left"
+                    onClick={prevImage}
+                    aria-label="Forrige bilde"
+                  >
+                    ←
+                  </button>
+
+                  <button
+                    type="button"
+                    className="product-modal-arrow product-modal-arrow--right"
+                    onClick={nextImage}
+                    aria-label="Neste bilde"
+                  >
+                    →
+                  </button>
+
+                  <div className="product-modal-dots">
+                    {product.images.map((_, index) => (
+                      <button
+                        key={index}
+                        type="button"
+                        aria-label={`Vis bilde ${index + 1}`}
+                        className={
+                          index === currentImageIndex
+                            ? "product-modal-dot active"
+                            : "product-modal-dot"
+                        }
+                        onClick={() => setCurrentImageIndex(index)}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
-          </>
-        )}
-      </div>
 
-      <div className="product-card-v2-body">
-        <p className="product-card-v2-ingress">{product.ingress}</p>
-        <p className="product-card-v2-desc">{product.description}</p>
+            <div className="product-modal-copy">
+              <div className="product-modal-kicker">
+                <span>{product.code}</span>
+                <span>{product.type}</span>
+              </div>
 
-        {product.tagline && (
-          <p className="product-card-v2-tagline">“{product.tagline}”</p>
-        )}
+              <h2>{product.name}</h2>
 
-        <a href="#venteliste" className="product-card-v2-cta">
-          {product.cta}
-        </a>
-      </div>
-    </article>
+              <p className="product-modal-ingress">{product.ingress}</p>
+
+              <p className="product-modal-description">
+                {product.description}
+              </p>
+
+              <div className="product-modal-benefits">
+                <p>Passer for deg som vil ha:</p>
+
+                <ul>
+                  {product.benefits.map((benefit) => (
+                    <li key={benefit}>{benefit}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <p className="product-modal-tagline">{product.tagline}</p>
+
+              <div className="product-modal-bottom">
+                <span className="product-modal-price">{product.price}</span>
+
+                <a href="#venteliste" className="product-modal-cta">
+                  {product.cta}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

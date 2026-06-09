@@ -29,11 +29,13 @@ export default function Hero() {
         <p className="hero-statement">Slutt å sove i interiør.</p>
 
         <p className="body-text hero-body">
-          Sengen din er ikke et stilleben. Den er der huden møter stoff, håret
-          gnisser mot puta, kroppen blir varm, svetter, hviler og prøver å
-          hente seg inn. BLACKOUT lager sengetøy for kroppen. Ikke for
-          boligstylisten.
-        </p>
+        Du bruker en tredjedel av livet i senga. Likevel kjøper de fleste sengetøy som om det bare skal se pent ut.
+  Blackout lager funksjonelt sengetøy for hud, temperatur, søvn og restitusjon.
+  <br />
+  <strong className="font-bold text-[#F1F0D8]">
+    Laget for kroppen din, ikke bare for soverommet.
+  </strong>
+</p>
 
         <div className="btn-group">
           <a href="#venteliste" className="btn btn-primary">

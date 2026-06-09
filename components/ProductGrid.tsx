@@ -3,13 +3,11 @@ import ProductCard from "./ProductCard";
 
 export default function ProductGrid() {
   return (
-    <section className="product-section-v2" id="produkter">
+    <section className="product-showcase" id="produkter">
       <div className="container">
-        <div className="product-section-v2-head">
+        <div className="product-showcase-head">
           <div>
-            <span className="section-index section-index--accent">
-              03 / Produkter
-            </span>
+            <p className="section-index">03 / Produkter</p>
 
             <h2 className="section-title">
               Fire produkter.
@@ -18,16 +16,14 @@ export default function ProductGrid() {
             </h2>
           </div>
 
-          <p className="body-text product-section-v2-intro">
-            Fra flaggskip til fundament. BLACKOUT er bygget som et system for
-            netter der kroppen faktisk teller — uten pyntespråk og uten beige
-            livsstilsløgn.
+          <p className="product-showcase-intro">
+            Velg nivå. Klikk inn. Se hva som skiller produktene fra hverandre.
           </p>
         </div>
 
-        <div className="product-grid-v2">
-          {products.map((p) => (
-            <ProductCard key={p.id} product={p} />
+        <div className="product-tile-grid">
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
       </div>

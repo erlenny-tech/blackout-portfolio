@@ -21,6 +21,8 @@ export interface Product {
   ingress: string;
   tagline: string;
   description: string;
+  benefits: string[];
+  price: string;
   images: ProductImage[];
   cta: string;
   accent: "blue" | "orange" | "green" | "neutral";
@@ -33,12 +35,19 @@ export const products: Product[] = [
     id: "overdrive",
     name: "OVERDRIVE",
     code: "OD-01",
-    type: "Det ultimate premium-settet",
-    ingress:
-      "Flaggskipet. Det dyreste, mest teknologiske og kompromissløse sengetøyet vi har. Laget for maksimal restitusjon.",
-    tagline: "Maximum recovery. Zero compromise.",
+    type: "Premium sengesett",
+    ingress: "Vårt mest kompromissløse sengesett.",
+    tagline:
+      "For deg som vil ha det beste vi lager. Ikke fordi det er dyrt. Fordi du merker det.",
     description:
-      "For deg som vil ha det mest gjennomførte settet vi lager. OVERDRIVE er bygget for netter der kroppen skal hente seg helt inn — med materialer og detaljer som gjør senga til et bedre sted å lande.",
+      "Dette er vår premiumversjon: et funksjonelt sengesett for maksimal komfort, bedre temperaturfølelse og en hudkontakt som gjør at vanlig sengetøy plutselig føles litt mistenkelig. OVERDRIVE er for varme netter, dyre madrasser, krevende kropper og folk som har forstått at restitusjon ikke starter på treningssenteret. Den starter i senga.",
+    benefits: [
+      "Vår beste materialkvalitet",
+      "En mer luksuriøs, glatt og behagelig hudfølelse",
+      "Bedre temperaturkomfort",
+      "Et sengesett som tar søvn, hud og restitusjon på alvor",
+    ],
+    price: "7 300 kr",
     images: [
       {
         src: OVERDRIVE_IMAGE_1_URL,
@@ -49,7 +58,7 @@ export const products: Product[] = [
         alt: "OVERDRIVE sengetøy fra BLACKOUT, bilde 2",
       },
     ],
-    cta: "Se OVERDRIVE",
+    cta: "Meld deg på venteliste",
     accent: "green",
     featured: true,
   },
@@ -57,12 +66,19 @@ export const products: Product[] = [
     id: "velocity",
     name: "VELOCITY",
     code: "VL-02",
-    type: "Medium-settet",
-    ingress:
-      "Gullstandarden for den gjengse high-performer. Priset for volum, men pakket med akkurat nok edge til at det føles som en massiv oppgradering fra alt annet på markedet.",
-    tagline: "Engineered for momentum.",
+    type: "Balansert sengesett",
+    ingress: "Det beste valget for de fleste netter.",
+    tagline:
+      "Vår anbefaling til folk som vil sove bedre uten å overtenke det.",
     description:
-      "VELOCITY er arbeidshesten. Et sett for folk som vil ha mer funksjon, mer energi og mer kontroll i senga — uten å gå hele veien til flaggskipet.",
+      "Mer komfort. Mer funksjon. Mer følelse av at senga faktisk jobber litt med deg gjennom natta. VELOCITY er sengetøyet for deg som vil merke forskjell, men ikke trenger å gjøre hele soverommet om til et søvnlaboratorium. Materialene er valgt for en bedre kombinasjon av pusteevne, hudfølelse og holdbarhet.",
+    benefits: [
+      "Bedre temperaturfølelse gjennom natta",
+      "Mykere og glattere kontakt mot huden",
+      "Høyere komfort enn standard sengetøy",
+      "Et sengesett som føles som en ordentlig oppgradering",
+    ],
+    price: "3 100 kr",
     images: [
       {
         src: VELOCITY_IMAGE_1_URL,
@@ -73,19 +89,25 @@ export const products: Product[] = [
         alt: "VELOCITY sengetøy fra BLACKOUT, bilde 2",
       },
     ],
-    cta: "Se VELOCITY",
+    cta: "Meld deg på venteliste",
     accent: "blue",
   },
   {
     id: "spark",
     name: "SPARK",
     code: "SP-03",
-    type: "Det rimeligere settet",
-    ingress:
-      "Startmodellen. Rimeligere materialer, men med nøyaktig samme holdning. For et yngre, urbant publikum som kanskje ikke har råd til flaggskipet ennå, men som nekter å kjøpe kjedelig sengetøy.",
-    tagline: "The ignition.",
+    type: "Startmodell",
+    ingress: "Inngangen til bedre netter.",
+    tagline: "For deg som vil slutte å kjøpe tilfeldig sengetøy.",
     description:
-      "SPARK er inngangen til BLACKOUT. Samme attitude, samme retning — bare mer tilgjengelig. For folk som vil starte et sted, men fortsatt sove med stil og mening.",
+      "Et enkelt, friskt og funksjonelt sengesett for deg som vil ha sengetøy som gjør mer enn å se greit ut. Laget for hverdagsbruk, vask, søvn, svette og alt det vanlige livet som skjer mellom leggetid og vekkerklokka. Dette er ikke luksus. Det er bare bedre logikk.",
+    benefits: [
+      "Et rimeligere første møte med BLACKOUT",
+      "Sengetøy som puster bedre",
+      "God komfort uten hotellprat",
+      "Et sengesett du faktisk bruker hele tiden",
+    ],
+    price: "1 399 kr",
     images: [
       {
         src: SPARK_IMAGE_1_URL,
@@ -96,7 +118,7 @@ export const products: Product[] = [
         alt: "SPARK sengetøy fra BLACKOUT, bilde 2",
       },
     ],
-    cta: "Se SPARK",
+    cta: "Meld deg på venteliste",
     accent: "orange",
   },
   {
@@ -104,18 +126,25 @@ export const products: Product[] = [
     name: "GROUND CONTROL",
     code: "GC-04",
     type: "Separat laken",
-    ingress:
-      "Fundamentet i senga. Det som holder deg på plass mens kroppen lades opp.",
-    tagline: "The foundation of your recharge.",
+    ingress: "Lakenet som holder hele systemet sammen.",
+    tagline:
+      "For deg som vil at hele senga skal føles gjennomtenkt, ikke bare dynetrekket og puten.",
     description:
-      "GROUND CONTROL kan kjøpes separat og er laget som basen i systemet. Et laken som gir senga en bedre start og kroppen et roligere sted å lade.",
+      "GROUND CONTROL er lakenet vårt. Det er laget for samme idé som resten av BLACKOUT: at alt kroppen ligger mot bør ha en funksjon. Et godt laken skal ikke bare dekke madrassen. Det skal ligge godt, føles riktig, puste, tåle vask og være behagelig mot kroppen natt etter natt.",
+    benefits: [
+      "Et laken som matcher følelsen i våre sengesett",
+      "Bedre komfort mot kroppen",
+      "Et mer komplett sovemiljø",
+      "Mindre irritasjon, mindre krøll, mer ro",
+    ],
+    price: "2600 kr",
     images: [
       {
         src: GROUND_CONTROL_IMAGE_URL,
         alt: "GROUND CONTROL laken fra BLACKOUT",
       },
     ],
-    cta: "Se GROUND CONTROL",
+    cta: "Meld deg på venteliste",
     accent: "neutral",
     separate: true,
   },
