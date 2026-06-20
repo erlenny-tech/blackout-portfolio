@@ -6,18 +6,18 @@ const FRONT_IMAGE_URL =
 const proofPoints = [
   {
     label: "01",
-    title: "Termoregulering",
-    text: "Materialet skal hjelpe kroppen å kvitte seg med varme, ikke fange den inne.",
+    title: "Jevnere temperatur",
+    text: "Materialene skal hjelpe sovemiljøet å føles mer stabilt når kroppen veksler mellom varm, kald og klam gjennom natten.",
   },
   {
     label: "02",
-    title: "Mindre friksjon",
-    text: "Overflaten er laget for hud, hår og bevegelse gjennom natten.",
+    title: "Tørrere følelse",
+    text: "Bedre håndtering av varme og fukt gjør at tekstilet oppleves friskere mot kroppen — særlig for deg som våkner varm eller svett.",
   },
   {
     label: "03",
-    title: "Restitusjon",
-    text: "Søvn er ikke passiv. Kroppen reparerer, regulerer og bygger seg opp igjen.",
+    title: "Bedre hudkontakt",
+    text: "Glattere, mer hudvennlige fibre gir mindre ru kontakt mot ansikt, hår og kropp enn tungt, stivt eller tilfeldig sengetøy.",
   },
 ];
 
@@ -27,42 +27,42 @@ export default function ProblemSection() {
       <div className="container">
         <div className="problem-feature">
           <div className="problem-feature-copy">
-            <p className="section-index">02 / Hvorfor</p>
+            <p className="section-index">02 / Problemet</p>
 
             <h2 className="section-title problem-feature-title">
-              SØVN ER EN FYSISK PROSESS.
+              Vanlig sengetøy er laget for rommet. BLACKOUT er laget for kroppen.
             </h2>
 
             <div className="problem-feature-text">
               <p>
-                Kroppen regulerer temperatur. Huden møter tekstil. Fukt
-                transporteres, varme akkumuleres, og cellene gjenoppbygges
-                mellom søvnfasene.
+                De fleste sengesett selges med ord som egyptisk bomull,
+                hotellfølelse og høy trådtetthet. Det sier lite om det du faktisk
+                merker klokken 03:17: varme, svette, friksjon, tørr hud, bustete
+                hår og følelsen av å våkne litt for kokt.
               </p>
 
               <p>
-                Likevel har sengetøy nesten alltid blitt designet som interiør.
+                BLACKOUT er bygget rundt en enkel idé: Sengetøy bør fungere mer
+                som teknisk bekledning enn som pynt. Det skal håndtere kroppens
+                mikroklima, føles godt mot huden og tåle å bli brukt hardt, natt
+                etter natt.
               </p>
 
               <p>
-                BLACKOUT er utviklet for kroppen, ikke soverommet. Teknisk
-                utstyr konstruert for termoregulering, mindre friksjon og
-                uforstyrret restitusjon.
-              </p>
-
-              <p>
-                Fordi kvaliteten på materialet avgjør hvordan du våkner.
+                Derfor ser vi på materialer med temperaturbalanserende,
+                fuktregulerende og hudvennlige egenskaper — ikke bare tekstiler
+                som ser fine ut på et produktbilde.
               </p>
             </div>
 
             <div className="problem-feature-actions">
               <a href="#produkter" className="btn btn-primary">
-                <span className="btn-tag">DROP</span>
+                <span className="btn-tag">Drop</span>
                 Se produktene
               </a>
 
               <a href="#hvorfor" className="btn btn-secondary">
-                <span className="btn-tag">TECH</span>
+                <span className="btn-tag">Materialer</span>
                 Hvordan det virker
               </a>
             </div>
@@ -73,18 +73,18 @@ export default function ProblemSection() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={FRONT_IMAGE_URL}
-                alt="BLACKOUT funksjonelt sengetøy i mørk teknisk produktsetting"
+                alt="BLACKOUT funksjonelt sengetøy i frisk teknisk produktsetting"
                 className="problem-feature-image"
               />
 
               <div className="problem-feature-image-overlay" />
 
               <div className="problem-feature-badge problem-feature-badge--top">
-                <TechLabel variant="blue">Thermal control</TechLabel>
+                <TechLabel variant="blue">Microclimate control</TechLabel>
               </div>
 
               <div className="problem-feature-badge problem-feature-badge--bottom">
-                <span>Material matters</span>
+                <span>Not decor. Night gear.</span>
               </div>
             </div>
           </div>

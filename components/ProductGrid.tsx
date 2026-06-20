@@ -10,14 +10,16 @@ export default function ProductGrid() {
             <p className="section-index">03 / Produkter</p>
 
             <h2 className="section-title">
-              Fire produkter.
+              Fire innganger.
               <br />
-              Ett system.
+              Samme nattlogikk.
             </h2>
           </div>
 
           <p className="product-showcase-intro">
-            Velg nivå. Klikk inn. Se hva som skiller produktene fra hverandre.
+            Fra startmodell til premiumsett: alle produktene er bygget rundt
+            samme idé — jevnere temperaturfølelse, bedre hudkontakt og mindre
+            klamhet enn vanlig sengetøy.
           </p>
         </div>
 

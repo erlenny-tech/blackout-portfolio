@@ -11,25 +11,25 @@ export default function NightAudit() {
           </div>
 
           <h2 className="section-title night-audit-title">
-            Er sengen din interiør eller kroppsutstyr?
+            Sover du i tekstil som hjelper kroppen — eller bare dekker madrassen?
           </h2>
 
           <p className="body-text">
-            Ta Night Audit og finn ut hva natten din trenger mer av: mindre
-            varme, mindre friksjon, bedre hudkontakt eller bare et putevar som
-            ikke føles som en gammel totebag.
+            Ta Night Audit og finn ut hva sengen din mangler mest: bedre
+            temperaturbalanse, mindre klamhet, roligere hudkontakt eller et
+            putevar som faktisk er laget for ansiktet ditt.
           </p>
 
           <div className="night-audit-checks">
             <span>Varme</span>
-            <span>Friksjon</span>
+            <span>Fukt</span>
             <span>Hudkontakt</span>
-            <span>Putevar</span>
+            <span>Friksjon</span>
           </div>
 
           <div className="btn-group">
             <a href="#venteliste" className="btn btn-primary btn--wide">
-              <span className="btn-tag">START</span>
+              <span className="btn-tag">Start</span>
               Ta Night Audit
             </a>
           </div>

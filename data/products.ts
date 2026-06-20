@@ -36,16 +36,16 @@ export const products: Product[] = [
     name: "OVERDRIVE",
     code: "OD-01",
     type: "Premium sengesett",
-    ingress: "Vårt mest kompromissløse sengesett.",
+    ingress: "For deg som vil merke forskjell hver eneste natt.",
     tagline:
-      "For deg som vil ha det beste vi lager. Ikke fordi det er dyrt. Fordi du merker det.",
+      "Det nærmeste BLACKOUT kommer et komplett natt-system: kjøligere følelse, roligere hudkontakt og mer kontroll på mikroklimaet i sengen.",
     description:
-      "Dette er vår premiumversjon: et funksjonelt sengesett for maksimal komfort, bedre temperaturfølelse og en hudkontakt som gjør at vanlig sengetøy plutselig føles litt mistenkelig. OVERDRIVE er for varme netter, dyre madrasser, krevende kropper og folk som har forstått at restitusjon ikke starter på treningssenteret. Den starter i senga.",
+      "OVERDRIVE er vår mest gjennomførte versjon av funksjonelt sengetøy. Det utvikles for deg som ofte blir varm, våkner klam, snur puta etter den kalde siden eller kjenner at vanlig sengetøy blir tungt og innestengt gjennom natten. Målet er en mer stabil temperaturfølelse, bedre håndtering av fukt og en mykere kontaktflate mot hud og hår — uten at sengen føles teknisk eller plastete.",
     benefits: [
-      "Vår beste materialkvalitet",
-      "En mer luksuriøs, glatt og behagelig hudfølelse",
-      "Bedre temperaturkomfort",
-      "Et sengesett som tar søvn, hud og restitusjon på alvor",
+      "Mest avansert materialpakke i første slipp",
+      "Utviklet for jevnere temperaturfølelse gjennom natten",
+      "Glattere og mer behagelig kontakt mot ansikt, hår og kropp",
+      "For varme netter, krevende sovemiljø og folk som faktisk bryr seg om hvordan de våkner",
     ],
     price: "7 300 kr",
     images: [
@@ -67,16 +67,16 @@ export const products: Product[] = [
     name: "VELOCITY",
     code: "VL-02",
     type: "Balansert sengesett",
-    ingress: "Det beste valget for de fleste netter.",
+    ingress: "Det beste valget for de fleste som vil oppgradere fra vanlig sengetøy.",
     tagline:
-      "Vår anbefaling til folk som vil sove bedre uten å overtenke det.",
+      "For deg som ikke trenger et søvnlaboratorium, men vil ha sengetøy som faktisk føles bedre mot kroppen.",
     description:
-      "Mer komfort. Mer funksjon. Mer følelse av at senga faktisk jobber litt med deg gjennom natta. VELOCITY er sengetøyet for deg som vil merke forskjell, men ikke trenger å gjøre hele soverommet om til et søvnlaboratorium. Materialene er valgt for en bedre kombinasjon av pusteevne, hudfølelse og holdbarhet.",
+      "VELOCITY er laget for hverdagsnettene: de litt varme, litt klamme, litt urolige nettene der vanlig bomull ikke gjør så mye annet enn å være der. Materialene er valgt for en bedre kombinasjon av pusteevne, myk hudkontakt og friskere følelse mellom vask. Dette er produktet for deg som vil merke oppgraderingen uten å gjøre hele soverommet til et prosjekt.",
     benefits: [
-      "Bedre temperaturfølelse gjennom natta",
-      "Mykere og glattere kontakt mot huden",
-      "Høyere komfort enn standard sengetøy",
-      "Et sengesett som føles som en ordentlig oppgradering",
+      "God balanse mellom komfort, funksjon og pris",
+      "Laget for bedre pusteevne og mindre innestengt følelse",
+      "Mykere kontakt mot huden enn standard hverdagssengetøy",
+      "En tydelig oppgradering for de fleste netter",
     ],
     price: "3 100 kr",
     images: [
@@ -97,15 +97,16 @@ export const products: Product[] = [
     name: "SPARK",
     code: "SP-03",
     type: "Startmodell",
-    ingress: "Inngangen til bedre netter.",
-    tagline: "For deg som vil slutte å kjøpe tilfeldig sengetøy.",
+    ingress: "Inngangen til sengetøy med mer funksjon og mindre interiørprat.",
+    tagline:
+      "For deg som vil slutte å kjøpe tilfeldig sengetøy, men ikke trenger premiumversjonen ennå.",
     description:
-      "Et enkelt, friskt og funksjonelt sengesett for deg som vil ha sengetøy som gjør mer enn å se greit ut. Laget for hverdagsbruk, vask, søvn, svette og alt det vanlige livet som skjer mellom leggetid og vekkerklokka. Dette er ikke luksus. Det er bare bedre logikk.",
+      "SPARK er første steg inn i BLACKOUT: et friskt, enkelt og mer gjennomtenkt sengesett for hverdagsbruk. Det er laget for deg som vil ha bedre komfort, bedre pusteevne og en renere nattfølelse enn standard sengetøy — uten at produktet blir overkomplisert. Mindre hotellfantasi. Mer faktisk bruk.",
     benefits: [
-      "Et rimeligere første møte med BLACKOUT",
-      "Sengetøy som puster bedre",
-      "God komfort uten hotellprat",
-      "Et sengesett du faktisk bruker hele tiden",
+      "Rimeligere første møte med BLACKOUT",
+      "Laget for bedre luft og lettere nattfølelse",
+      "Et godt valg hvis du ofte synes vanlig sengetøy blir tungt eller klamt",
+      "En enkel oppgradering du faktisk bruker hele tiden",
     ],
     price: "1 399 kr",
     images: [
@@ -126,18 +127,18 @@ export const products: Product[] = [
     name: "GROUND CONTROL",
     code: "GC-04",
     type: "Separat laken",
-    ingress: "Lakenet som holder hele systemet sammen.",
+    ingress: "Fordi kroppen ikke bare ligger mot dynetrekket.",
     tagline:
-      "For deg som vil at hele senga skal føles gjennomtenkt, ikke bare dynetrekket og puten.",
+      "Lakenet er basen i sovemiljøet. Hvis det føles feil, føles hele sengen feil.",
     description:
-      "GROUND CONTROL er lakenet vårt. Det er laget for samme idé som resten av BLACKOUT: at alt kroppen ligger mot bør ha en funksjon. Et godt laken skal ikke bare dekke madrassen. Det skal ligge godt, føles riktig, puste, tåle vask og være behagelig mot kroppen natt etter natt.",
+      "GROUND CONTROL er lakenet som gjør BLACKOUT-systemet mer komplett. Det er laget for samme logikk som resten av serien: bedre kontakt mot kroppen, friskere følelse og mer kontroll på varme og fukt der du faktisk ligger. Et godt laken skal ikke bare dekke madrassen. Det skal holde seg godt, puste, tåle vask og føles rolig mot kroppen natt etter natt.",
     benefits: [
-      "Et laken som matcher følelsen i våre sengesett",
-      "Bedre komfort mot kroppen",
-      "Et mer komplett sovemiljø",
-      "Mindre irritasjon, mindre krøll, mer ro",
+      "Matcher følelsen i resten av BLACKOUT-systemet",
+      "Laget for bedre komfort mot kroppen og madrassen",
+      "Bidrar til et mer komplett og friskere sovemiljø",
+      "Mindre krøll, mindre irritasjon, mer ro",
     ],
-    price: "2600 kr",
+    price: "2 600 kr",
     images: [
       {
         src: GROUND_CONTROL_IMAGE_URL,

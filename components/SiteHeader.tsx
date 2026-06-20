@@ -9,7 +9,7 @@ export default function SiteHeader() {
         </a>
         <div className="site-header-meta">
           <TechLabel variant="green">Drop 01</TechLabel>
-          <span className="site-header-status">Night use only</span>
+          <span className="site-header-status">Natural performance bedding</span>
         </div>
       </div>
     </header>

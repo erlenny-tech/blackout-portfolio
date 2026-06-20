@@ -4,12 +4,12 @@ import { FormEvent, useState } from "react";
 import TechLabel from "./TechLabel";
 
 const interests = [
-  "Hud",
-  "Hår",
-  "Varme",
-  "Komfort",
-  "Anti-interiør",
-  "Gave",
+  "Jeg blir varm om natten",
+  "Jeg våkner klam eller svett",
+  "Jeg vil ha bedre hudkontakt",
+  "Jeg bryr meg om hår og putevar",
+  "Jeg vil ha bedre hverdagskomfort",
+  "Jeg er nysgjerrig på funksjonelle materialer",
   "Annet",
 ];
 
@@ -30,8 +30,9 @@ export default function Waitlist() {
         </div>
 
         <p className="body-text">
-          Bli med på første slipp. Du får tidlig tilgang, lanseringspris og
-          første versjon av BLACKOUT Night Protocol.
+          Bli med på første slipp hvis du vil teste sengetøy som er utviklet for
+          temperatur, fukt og hudkontakt — ikke bare for å matche resten av
+          soverommet.
         </p>
 
         {submitted ? (
@@ -39,15 +40,15 @@ export default function Waitlist() {
             <TechLabel variant="green">Bekreftet</TechLabel>
             <h3>Du er på lista.</h3>
             <p className="body-text">
-              Du får tidlig tilgang, lanseringspris og første versjon av
-              BLACKOUT Night Protocol.
+              Du får tidlig tilgang til Drop 01 og innblikk i hvilke materialer,
+              produkter og tester vi går videre med.
             </p>
           </div>
         ) : (
           <form className="waitlist-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="email">
-                <span className="form-label-tag">Felt_01</span>
+                <span className="form-label-tag">Kontakt</span>
                 E-post
               </label>
 
@@ -63,8 +64,8 @@ export default function Waitlist() {
 
             <div className="form-group">
               <label htmlFor="interest">
-                <span className="form-label-tag">Felt_02</span>
-                Hva bryr du deg mest om?
+                <span className="form-label-tag">Behov</span>
+                Hva vil du helst at sengetøyet skal løse?
               </label>
 
               <select id="interest" name="interest" required defaultValue="">
@@ -81,7 +82,7 @@ export default function Waitlist() {
             </div>
 
             <button type="submit" className="btn btn-primary btn--wide">
-              <span className="btn-tag">JOIN</span>
+              <span className="btn-tag">Drop 01</span>
               Bli med på første slipp
             </button>
           </form>

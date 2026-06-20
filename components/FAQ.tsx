@@ -4,24 +4,28 @@ import { useState } from "react";
 
 const items = [
   {
-    q: "Er dette ekte produkter?",
-    a: "Vi utvikler første slipp nå. Ventelisten brukes til å se hva folk faktisk trenger før vi produserer for mye tull.",
+    q: "Hva gjør BLACKOUT annerledes enn vanlig sengetøy?",
+    a: "Vanlig sengetøy er ofte laget for hvordan sengen ser ut. BLACKOUT utvikles for hvordan kroppen har det i sengen: temperatur, fukt, hudkontakt, hår, bevegelse og følelsen du våkner med.",
   },
   {
-    q: "Hva gjør BLACKOUT annerledes enn vanlig sengetøy?",
-    a: "Vi starter med kroppen, ikke soverommet. Hud, hår, varme, friksjon, vask og komfort kommer før fargepaletter og pynteputer.",
+    q: "Blir jeg kald av det?",
+    a: "Nei, målet er ikke iskaldt sengetøy. Målet er en mer balansert temperaturfølelse: mindre overoppheting når du blir varm, og mindre urolig veksling mellom varmt, klamt og kaldt.",
+  },
+  {
+    q: "Er dette bare vanlig sengetøy med et nytt navn?",
+    a: "Nei. Vi ser på funksjonelle materialer som brukes fordi de kan gjøre noe: håndtere varme, fukt og hudkontakt bedre enn standardtekstiler. Produktet skal fortsatt føles enkelt, mykt og naturlig — bare mer gjennomtenkt.",
+  },
+  {
+    q: "Passer det for sensitiv hud?",
+    a: "Vi utvikler BLACKOUT med hudkontakt som et viktig krav. Det betyr mykere overflater, hudvennlige fibre og mindre ru friksjon mot ansikt og kropp. Det er ikke et medisinsk produkt, men tekstilet skal føles roligere mot huden.",
   },
   {
     q: "Hvorfor begynne med putevar?",
-    a: "Fordi ansiktet ditt bor der i åtte timer. Virker som et greit sted å starte.",
+    a: "Fordi ansikt, hår, hudpleie og varme møter puta hver natt. Hvis du skal merke forskjell raskt, er putevaret et av de mest logiske stedene å starte.",
   },
   {
     q: "Når lanseres det?",
-    a: "Når Drop 01 er klart. Folk på ventelisten får første beskjed.",
-  },
-  {
-    q: "Hva kommer det til å koste?",
-    a: "Vi tester fortsatt pris. Målet er at det skal føles som teknisk utstyr du faktisk bruker, ikke som sengetøy du angrer på etter én vask.",
+    a: "Når Drop 01 er klart. Folk på ventelisten får første beskjed og tidlig tilgang.",
   },
 ];
 

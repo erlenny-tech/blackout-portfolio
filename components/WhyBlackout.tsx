@@ -6,23 +6,23 @@ const PRODUCT_IMAGE_URL =
 const benefits = [
   {
     label: "01",
-    title: "Temperaturkomfort",
-    text: "Åpne, pustende tekstiler hjelper varme og fukt bort fra kroppen, slik at senga føles friskere gjennom natten.",
+    title: "Temperaturbalanse",
+    text: "Funksjonelle tekstiler kan bidra til å dempe varme topper og kalde dipper, slik at sengen føles mer stabil gjennom natten.",
   },
   {
     label: "02",
-    title: "Mindre friksjon",
-    text: "Glattere kontaktflater gir en mer behagelig følelse mot hud og hår, spesielt for deg som sover urolig eller bruker nattkrem.",
+    title: "Mindre klamhet",
+    text: "Når varme og fukt håndteres bedre, føles tekstilet friskere mot kroppen. Målet er færre netter der du våkner varm, svett eller innestengt.",
   },
   {
     label: "03",
-    title: "Fukttransport",
-    text: "Materialet er valgt for å håndtere svette og varme bedre enn tungt, tett og klassisk sengetøy.",
+    title: "Hudvennlig kontakt",
+    text: "Myke cellulosebaserte fibre og glattere overflater kan gi en roligere kontakt mot ansikt, hår og hud enn grovere standardtekstiler.",
   },
   {
     label: "04",
-    title: "Bygget for bruk",
-    text: "Sengetøyet skal tåle hverdagen: vask, kropp, bevegelse, varme netter og gjentatt bruk uten å føles slappt eller tilfeldig.",
+    title: "Renere nattfølelse",
+    text: "Materialer med bedre fukt-, lukt- og hygieneegenskaper gjør at sengetøyet kan føles friskere mellom vask — uten at det blir en gadget.",
   },
 ];
 
@@ -32,30 +32,32 @@ export default function WhyBlackout() {
       <div className="container">
         <div className="how-it-works">
           <div className="how-it-works-copy">
-            <p className="section-index">04 / Hvordan det virker</p>
+            <p className="section-index">04 / Forskjellen</p>
 
             <h2 className="section-title">
-              Designet for det kroppen gjør om natten.
+              Dette er ikke mykere bomull med bedre markedsføring.
             </h2>
 
             <div className="how-it-works-text">
               <p>
-                Vanlig sengetøy er ofte laget for å se fint ut på en seng.
-                BLACKOUT er laget for det som faktisk skjer når du sover:
-                varme, fukt, friksjon, hudkontakt og bevegelse.
+                BLACKOUT handler ikke om å finne en dyrere variant av vanlig
+                sengetøy. Vi utvikler et tekstilsystem for det kroppen faktisk
+                gjør om natten: regulerer temperatur, avgir fukt, beveger seg,
+                gnir mot tekstil og restituerer.
               </p>
 
               <p>
-                Materialene er valgt for å gi en glattere kontaktflate, bedre
-                pusteevne og en mer stabil temperaturfølelse gjennom natten.
-                Ikke som en gadget. Ikke som en app. Bare bedre tekstil mot
-                kroppen.
+                Materialene vi undersøker er kjent fra funksjonelle tekstiler:
+                noen kan lagre og frigjøre varme for å gi en jevnere
+                temperaturfølelse, andre bruker hudvennlige fibre som hjelper
+                tekstilet å føles mykere, friskere og mer behagelig mot kroppen.
               </p>
 
               <p>
-                Resultatet er sengetøy som føles friskere, lettere og mer
-                gjennomtenkt — spesielt når kroppen jobber, svetter, restituerer
-                og henter seg inn.
+                Verdien er enkel: mindre “jeg må snu puta til den kalde siden”,
+                mindre klam dynefølelse, mindre ru tekstil mot ansiktet — og mer
+                av den rene, kjølige følelsen du egentlig vil ha når du legger
+                deg.
               </p>
             </div>
           </div>
@@ -74,7 +76,7 @@ export default function WhyBlackout() {
             </div>
 
             <div className="how-it-works-image-badge how-it-works-image-badge--bottom">
-              <span>Built for night performance</span>
+              <span>Temperature · moisture · skin</span>
             </div>
           </div>
         </div>
